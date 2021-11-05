@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# blog APP
+# Blog APP
 
 > A simple blog constructed with Ruby where you can post content and red comments.
 
@@ -48,6 +48,3 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
