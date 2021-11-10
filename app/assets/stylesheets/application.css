@@ -53,11 +53,11 @@ p {
   margin: 0 5%;
   height: 15vh;
   width: 15vh;
-  border: 2px solid black;  
+  border: 2px solid black;
 }
 
 .photo {
-    height: 15vh;
+  height: 15vh;
   width: 15vh;
 }
 
@@ -137,12 +137,12 @@ p {
 }
 
 .button {
-  display: flex;   
+  display: flex;
   margin: 5vh auto;
   width: fit-content;
   background-color: var(--ctn_backgrond);
   padding: var(--margin-text);
-  border: 2px solid black;  
+  border: 2px solid black;
   font-weight: bold;
 }
 
@@ -171,5 +171,5 @@ p {
 }
 
 .comments_container > ul {
-    background-color: var(--ctn_backgrond);
+  background-color: var(--ctn_backgrond);
 }
