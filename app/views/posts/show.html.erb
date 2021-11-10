@@ -1,2 +1,21 @@
-<h1>Show selected post from user</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<ul class="posts_container">
+    <li class="post_list">
+        <div class="post_show_info">
+            <h2 ><%= @post.title %></h2>
+            <p class="post_author">Post by: <%= @user.name%></p> 
+        </div> 
+        <p><%= @post.text %></p>
+        <div class="counter_container">
+            <p>Comments: <%= @post.comments_counter %></p>
+            <p>Likes: <%= @post.likes_counter %></p>
+        </div>        
+    </li> 
+    <div class="comments_container">
+        <ul>
+            <h2 class="bio_title">Comments: </h2>
+            <% @post.comments.all.each do |c| %>
+                <li><p><%= c.text %></p></li>
+            <% end %>
+        </ul>
+    </div>
+</ul>

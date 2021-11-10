@@ -1,2 +1,29 @@
-<h1>Show User with his Index on url</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="user_profile">
+    <div class="photo_container">
+        <%= image_tag 'user-avatar.png',
+            alt: 'user',
+            class: 'photo' %>
+    </div>
+    <div class="info_container">        
+        <p class="name_container"><%= @user.name%></p>
+        <p class="posts_counter">Numer of posts: <%= @user.post_counter %></p>             
+    </div>    
+</div>
+<div class="bio_cnt">
+    <h2 class="bio_title">Bio</h2>
+    <p><%= @user.bio%></p>
+</div>
+<ul class="posts_container">
+<% @posts.each do |post| %> 
+    <li class="post_list">
+        <p class="post_tile"><%= post.title %></p>
+        <p><%= post.text %></p>
+        <div class="counter_container">
+            <p>Comments: <%= post.comments_counter %></p>
+            <p>Likes: <%= post.likes_counter %></p>
+        </div>
+    </li>    
+<% end %>
+</ul>
+ <%= button_to "Show all posts", user_posts_path(@user.id), :method => :get, class:"button" %>
+
