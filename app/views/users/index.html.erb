@@ -1,2 +1,17 @@
-<h1>Users Index list</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<ul class="user_container">
+    <% @users.each do |u| %>    
+      <%= link_to :action => 'show', :id => u.id do %>
+        <li class="user_list">
+          <div class="photo_container">
+            <%= image_tag 'user-avatar.png',
+            alt: 'user',
+            class: 'photo' %>
+          </div>      
+          <div class="info_container">        
+            <p class="name_container"><%= u.name %></p>
+            <p class="posts_counter">Numer of posts: <%= u.post_counter %></p>
+          </div>
+        </li>    
+      <% end %>
+    <% end %>
+</ul>
