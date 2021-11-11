@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog APP
+# Blog APP Forked repo
 
 > A simple blog constructed with Ruby where you can post content and red comments.
 
