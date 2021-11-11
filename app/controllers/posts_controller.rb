@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   def like
     @post = Post.all.find(params[:id])
     @user = User.find(params[:user_id])
-    @like = Like.create(author_id: @user.id, post_id: @post.id)
+    @like = Like.create(author_id: current_user.id, post_id: @post.id)
     redirect_to user_post_path(@user, @post)
   end
 end

@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.new((params.require(:comment).permit(:text)))
     @comment.post = @post
-    @comment.author = @user
+    @comment.author = current_user
     redirect_to user_post_path(@user, @post) if @comment.save
   end
 end

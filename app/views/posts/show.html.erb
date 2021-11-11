@@ -10,7 +10,7 @@
             <p>Likes: <%= @post.likes_counter %></p>
         </div>                
     </li> 
-    <%= button_to 'Like', like_path(user_id: @user.id, id: @post.id), method: "put", class: 'like_btn button' %>
+    <%= button_to 'Like', like_path(user_id: @user.id, post_id: @post.id), method: "put", class: 'like_btn button' %>
     <div class="comments_container">
         <ul>
             <h2 class="bio_title">Comments: </h2>
