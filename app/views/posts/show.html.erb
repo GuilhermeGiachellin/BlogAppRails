@@ -18,4 +18,11 @@
             <% end %>
         </ul>
     </div>
+    <div>
+        <h2>Add a comment: </h2>
+        <%= form_with model: [@user, @post, @post.comments.build], class:"form_cnt" do |form| %>            
+            <%= form.text_field :text %>
+            <%= form.submit %>
+        <% end %>
+    </div>
 </ul>

@@ -173,3 +173,23 @@ p {
 .comments_container > ul {
   background-color: var(--ctn_backgrond);
 }
+
+/*Form*/
+
+.form_cnt {
+    height: 50vh;
+    width: 70%;
+    margin: auto;
+    background-color: var(--ctn_backgrond);
+}
+
+.form_cnt > label {
+    background-color: var(--ctn_backgrond);
+}
+
+.form_cnt > div {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+}
