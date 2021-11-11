@@ -1,5 +1,8 @@
-<%= form_with model: [@user, @user.posts.build], class:"form_cnt" do |form| %>
-  <%= form.text_field :title %>
-  <%= form.text_field :text %>
+<div class="form_cnt show_form">
+<h2>Create a new Post</h2>
+<%= form_with model: [@user, @user.posts.build] do |form| %>
+  <%= form.text_field :title, placeholder: 'Title', require: true %>
+  <%= form.text_field :text, placeholder: 'Text', require: true  %>
   <%= form.submit %>
 <% end %>
+</div>
