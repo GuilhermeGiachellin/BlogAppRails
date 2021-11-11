@@ -5,11 +5,12 @@
             <p class="post_author">Post by: <%= @user.name%></p> 
         </div> 
         <p><%= @post.text %></p>
-        <div class="counter_container">
+        <div class="counter_container">            
             <p>Comments: <%= @post.comments_counter %></p>
             <p>Likes: <%= @post.likes_counter %></p>
-        </div>        
+        </div>                
     </li> 
+    <%= button_to 'Like', like_path(user_id: @user.id, post_id: @post.id), method: "put", class: 'like_btn button' %>
     <div class="comments_container">
         <ul>
             <h2 class="bio_title">Comments: </h2>
@@ -17,5 +18,12 @@
                 <li><p><%= c.text %></p></li>
             <% end %>
         </ul>
+    </div>
+    <div class="form_cnt">
+        <h2>Add a comment: </h2>
+        <%= form_with model: [@user, @post, @post.comments.build] do |form| %>            
+            <%= form.text_field :text %>
+            <%= form.submit %>
+        <% end %>
     </div>
 </ul>

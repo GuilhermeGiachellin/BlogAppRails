@@ -144,6 +144,11 @@ p {
   padding: var(--margin-text);
   border: 2px solid black;
   font-weight: bold;
+  color: black;
+}
+
+.button_to {
+  background-color: #272a31;
 }
 
 .post_tile {
@@ -172,4 +177,62 @@ p {
 
 .comments_container > ul {
   background-color: var(--ctn_backgrond);
+}
+
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  width: 70%;
+  margin: auto;
+  background-color: var(--ctn_backgrond);
+}
+
+.form_cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.form_cnt > h2 {
+  width: fit-content;
+  margin: var(--margin-text);
+}
+
+.form_cnt > div {
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  height: 20px;
+  width: 80%;
+  color: #fff;
+  margin-bottom: 2vh;
+}
+
+input[type="submit"] {
+  color: #fff;
+  padding: var(--margin-text);
+  margin: var(--margin-text);
+  width: fit-content;
+}
+
+.show_form {
+  width: 70%;
+  margin: 5vh auto;
+}
+
+.like_btn {
+  padding: 2.5vh 3vh;
+}
+
+::placeholder {
+  color: #ccc;
 }
