@@ -2,7 +2,7 @@
 
 # Blog APP
 
-> A simple blog constructed with Ruby where you can post content and red comments.
+> A simple blog constructed with Ruby where you can make posts, leave comments and like posts from other users.
 
 ## Built With
 
@@ -23,9 +23,13 @@ To get a local copy up and running follow these simple example steps..
 
 - cd into the directory.
 
+- Run `rails db:setup` This will seed the database.
+
 - run `rails s` to start the server.
 
 - open `localhost:3000` in your browser to see the page.
+
+- Stop the program with: "Ctrl + C" (Windows or Linux) or "Command + C"(Apple)
 
 ## Authors
 
