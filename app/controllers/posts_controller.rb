@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts 
+    @posts = @user.posts
   end
 
   def show
-    @user = User.find(params[:user_id])  
-    @post = @user.posts.find(params[:id]) 
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:id])
   end
 
   def new
@@ -23,5 +23,5 @@ class PostsController < ApplicationController
                        'Post not created'
                      end
     redirect_to user_post_path(current_user, @post)
-  end  
+  end
 end
