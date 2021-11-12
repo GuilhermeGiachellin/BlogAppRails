@@ -15,13 +15,13 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(params.require(:post).permit(:title, :text))
-    redirect_to user_post_path(current_user, @post) if @post.save
-  end
-
-  def like
-    @post = Post.all.find(params[:id])
-    @user = User.find(params[:user_id])
-    @like = Like.create(author_id: current_user.id, post_id: @post.id)
-    redirect_to user_post_path(@user, @post)
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    flash[:notice] = if @post.save
+                       'Post created'
+                     else
+                       'Post not created'
+                     end
+    redirect_to user_post_path(current_user, @post)
   end
 end

@@ -25,5 +25,17 @@
             <%= form.text_field :text %>
             <%= form.submit %>
         <% end %>
+        <% flash.each do |type, msg| %>
+            <% if type == 'notice' %>
+                <div class="notice">
+                <%= msg %>
+                </div>
+            <% end %>
+            <% if type == 'error' %>
+                <div class="notice">
+                <%= msg %>
+                </div>
+            <% end %>
+         <% end %>
     </div>
 </ul>

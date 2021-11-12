@@ -3,6 +3,6 @@
 <%= form_with model: [@user, @user.posts.build] do |form| %>
   <%= form.text_field :title, placeholder: 'Title', require: true %>
   <%= form.text_field :text, placeholder: 'Text', require: true  %>
-  <%= form.submit %>
+  <%= form.submit %>  
 <% end %>
 </div>
