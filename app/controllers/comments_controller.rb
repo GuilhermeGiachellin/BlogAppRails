@@ -5,6 +5,12 @@ class CommentsController < ApplicationController
     @comment = Comment.new((params.require(:comment).permit(:text)))
     @comment.post = @post
     @comment.author = current_user
-    redirect_to user_post_path(@user, @post) if @comment.save
+    if @comment.save
+      flash[:notice] = 'Comment created'
+      redirect_to user_post_path(@user, @post)      
+    else
+      flash[:notice] = 'Comment not created'
+      redirect_to user_post_path(@user, @post)  
+    end
   end
 end

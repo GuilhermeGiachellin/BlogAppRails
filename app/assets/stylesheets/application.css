@@ -203,12 +203,16 @@ form {
   margin: var(--margin-text);
 }
 
-.form_cnt > div {
+.notice {
+  height: 1vh;
+}
+
+/* .form_cnt > div {
   display: flex;
   height: 15vh;
   justify-content: center;
   align-items: center;
-}
+} */
 
 input[type="text"] {
   height: 20px;
@@ -235,4 +239,21 @@ input[type="submit"] {
 
 ::placeholder {
   color: #ccc;
+}
+
+/* FLASH */
+
+.notice {
+  margin: var(--margin-text);
+  font-weight: bold;  
+  animation-name: disapear;
+  animation-duration: 2s;
+}
+
+@keyframes disapear {
+  100%   {opacity: 1.0;}
+  75%  {opacity: 0.75;}
+  50%  {opacity: 0.50;}
+  25%  {opacity: 0.25;}
+  0% {opacity: 0;}
 }
