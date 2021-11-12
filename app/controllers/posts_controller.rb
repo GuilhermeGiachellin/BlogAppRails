@@ -30,12 +30,7 @@ class PostsController < ApplicationController
     @post = Post.all.find(params[:id])
     @user = User.find(params[:user_id])
     @like = Like.create(author_id: current_user.id, post_id: @post.id)    
-    if @like.save
-      flash[:notice] = 'Post liked'      
-      redirect_to user_post_path(@user, @post)    
-    else
-      flash[:notice] = "Couldn't like"
-      redirect_to user_post_path(@user, @post) 
-    end  
+    flash[:notice] = 'Post liked'      
+    redirect_to user_post_path(@user, @post)   
   end
 end
