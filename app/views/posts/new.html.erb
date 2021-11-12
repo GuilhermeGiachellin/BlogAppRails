@@ -1,3 +1,15 @@
+<% flash.each do |type, msg| %>
+  <% if type == 'notice' %>
+    <div class="flash_notice">
+      <%= msg %>
+    </div>
+  <% end %>
+  <% if type == 'error' %>
+    <div class="flash_error">
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
 <div class="form_cnt show_form">
 <h2>Create a new Post</h2>
 <%= form_with model: [@user, @user.posts.build] do |form| %>
