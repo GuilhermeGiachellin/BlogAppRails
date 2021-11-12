@@ -14,7 +14,7 @@
     <p><%= @user.bio%></p>
 </div>
 <ul class="posts_container">
-<% @posts.each do |post| %> 
+<% @posts.includes([:comments]).each do |post| %> 
     <%= link_to :action => 'show', :id => post.id do %>
         <li class="post_list">
             <h2 class="bio_title"><%= post.title %></h2>
