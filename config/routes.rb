@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     end
   end
   get 'new', to: 'posts#new'  
-  put '/post/:id/like', to: 'posts#like', as: 'like'
+  put '/post/:id/like', to: 'likes#create', as: 'like'
 end
